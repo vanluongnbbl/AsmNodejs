@@ -1,0 +1,27 @@
+extends ../layouts/common
+block content 
+    h1 Users
+
+    a(href="users/create") Create new user
+
+    form(action="/users/search", method="GET")
+        input(type="text", name="q")
+        button(type="submit", class="btn btn-primary") Search
+
+    table.table
+        tr
+            th Name
+            //- th Date of Birth
+            th Phone
+            th Actions
+
+        each user in users
+            tr
+                td= user.name
+                td= user.phone
+                td
+                    a.btn.btn-light(href="/users/" + user.id) View
+                td
+                    a.btn.btn-light(href="/users/delete/" + user.id) Delete
+                td
+                    a.btn.btn-light(href="/users/update/" + user.id) Update

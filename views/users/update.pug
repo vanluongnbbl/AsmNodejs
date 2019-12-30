@@ -1,0 +1,18 @@
+extends ../layouts/common.pug
+
+block content
+    h1 Update user
+
+    if errors
+        each error in errors
+            .alert.alert-danger= error
+
+    form(action="/users/update", method="POST")
+        .form-group
+            span= user.name
+            input#name.form-control(name="name", type="text", value = values ? values.name : "")
+        .form-group
+            span= user.phone
+            input#phone.form-control(name="phone", type="text", value = values ? values.phone : "")
+
+        button.btn.btn-primary(type="submit") Update

@@ -14,7 +14,7 @@
     "cookie-parse": "^0.4.0",
     "cookie-parser": "^1.4.4",
     "env": "0.0.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "lowdb": "^1.0.0",
     "md5": "^2.2.1",
     "mongoose": "^5.7.13",
